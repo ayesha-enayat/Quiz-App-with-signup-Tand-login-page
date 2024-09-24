@@ -1,0 +1,37 @@
+body{
+    background-color:#e6f7ff;
+    
+}
+button{
+    background-color:#FF1493;
+    color:#007FFF;
+
+}
+.navbar{
+    background-color:#003366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+.navbar-brand{
+    color:#fff;
+    margin-left: 10px;
+    
+}
+
+.card{
+    background-color:#003366;
+    border:2px solid #a8e6cf;
+    color:#fff;
+    
+}
+.btn-primary{
+    background-color: #00509e;
+    border:2px solid #ffff;
+    color:#fff;
+}
+.btn-primary:hover,a,.navbar-brand:hover{
+    color:#ffc107;
+}
+
