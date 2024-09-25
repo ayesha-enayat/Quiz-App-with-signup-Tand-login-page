@@ -1,14 +1,22 @@
-body{
-    background-color:#e6f7ff;
-    
-}
-button{
-    background-color:#FF1493;
-    color:#007FFF;
+:root{
+    --main-color:#003366;
+    --highlight-color:#ffc107;
+    --background-color:#a8e6cf;
+    --primary-color:#007FFF;
 
 }
+body{
+    background: var(--background-color);
+    box-sizing: border-box;
+}
+.img-div{
+    width:100%;
+    height: 100%;
+    background-image: url(Images/choose_3406828.png);
+    opacity: 0.4;
+}
 .navbar{
-    background-color:#003366;
+    background-color:var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,22 +24,105 @@ button{
 }
 .navbar-brand{
     color:#fff;
-    margin-left: 10px;
-    
+    margin-left: 10px;  
 }
-
+.navbar-brand:hover{
+    color:var(--highlight-color);
+}
 .card{
-    background-color:#003366;
-    border:2px solid #a8e6cf;
+    background-color:var(--main-color);
+    border:2px solid var(--background-color);
     color:#fff;
     
 }
-.btn-primary{
-    background-color: #00509e;
-    border:2px solid #ffff;
-    color:#fff;
+.card-body p {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
-.btn-primary:hover,a,.navbar-brand:hover{
-    color:#ffc107;
+.btn-primary,.btn-success{
+    background-color:var(--background-color) ;
+    border:2px solid var(--highlight-color);
+    color:var(--main-color);
+    padding: 8px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
+.btn-primary:hover,.btn-success:hover{
+    color:var(--main-color);
+    background-color: var(--highlight-color);
+    border:none;
+}
+a{
+   color:var(--highlight-color) ;
+   font-weight: 500;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color:var(--highlight-color) ;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--highlight-color);
+    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+  }
+  
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 400px) {
+    .container-fluid {
+        max-width: 100%; 
+        padding: 15px;
+        margin: 0px 5px;
+    }
+    .card{
+        min-width:100%;
+        height: 100%;
+    }
+    .card-body p {
+        font-size: 18px; 
+    }
+    label {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding: 10px;
+    }
+    .card{
+        min-width:100%;
+        height: 100%;
+    }
+    .card-body p {
+        font-size: 16px;
+    }
+    label {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 14px;
+    }
+}
+}

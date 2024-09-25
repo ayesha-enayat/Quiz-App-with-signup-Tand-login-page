@@ -13,9 +13,10 @@
 <body>
     <nav class="navbar">
         <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Quiz Application <img src="Images/choose_3406828.png" alt="" width="45px"></span>
+            <span class="navbar-brand mb-0 h1">Quiz Application <img src="Images/choose_3406828.png" alt=""
+                    width="45px"></span>
         </div>
-      </nav>
+    </nav>
     <div class="container card mt-5 w-50">
         <form onsubmit="login()" class="row g-3 p-3 ">
             <div class="col-md-12">
@@ -27,8 +28,13 @@
                 <input type="password" class="form-control" id="password">
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Log in</button>
-              </div>
+                <button type="submit" class="btn btn-primary mx-1">Log in</button>
+
+            </div>
+            <div class="col-12 text-center">
+                <a onclick="redirect()" href="#">Back to SignUp</a>
+            </div>
+
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
