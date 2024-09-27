@@ -1,5 +1,5 @@
 
-
+/***************************************SIGNUP FUNCTIONS ************************************/
 function registration() {
     event.preventDefault();
     var name = document.getElementById("name");
@@ -94,6 +94,7 @@ function login() {
 function redirect() {
     window.location.href = "./index.html";
 }
+
 
 /***************************************DASHBOARD FUNCTIONS ************************************/
 
@@ -217,7 +218,7 @@ function renderQuestion() {
                 <button id="next" class="btn btn-success mt-2" onClick="nextQuestion()">Next</button>
             </div>
             <div class="text-center mt-4">
-                <a  onclick="redirect()" href="#">Back to SignUp</a>
+                <a  onclick="redirect()" href="#">Back</a>
             </div>
         </div>
         
@@ -257,6 +258,7 @@ function nextQuestion() {
         index++;
         renderQuestion(); // Move to the next question
     }
+    
 }
 
 
@@ -265,10 +267,12 @@ function calResult() {
     var percentage = (result / questions.length) * 100;
     document.getElementById("cardHeader").innerHTML = "Your Result";
     if (percentage > 70 && percentage <= 100) {
-        document.getElementById("cardBody").innerHTML = "<p>Your Scrore is " + result + "/" + questions.length + "<br>" + "You passed the quiz with a score of " + percentage + "%" + "</p>";
+        document.getElementById("cardBody").innerHTML = "<p>Your Scrore is " + result + "/" + questions.length + "<br>" + "You correct " + result + " questions " + "</br>" + "Congratulations You passed the quiz with a score of " + percentage + "%" + "</p>";
+
     }
     else if (percentage < 70 && percentage >= 0) {
-        document.getElementById("cardBody").innerHTML = "<p>Your Scrore is " + result + "/" + questions.length + "<br>" + "You failed the quiz with a score of " + percentage + "%" + "</p>";
+        document.getElementById("cardBody").innerHTML = "<p>Your Scrore is " + result + "/" + questions.length + "<br>" + "You correct " + result + " questions " + "</br>" + "Passing marks is 70% " + "<br>" + "Oops! You failed the quiz Your score is " + percentage + "%" + "</p>";
+
     }
 }
 
